@@ -66,7 +66,6 @@
     // the error "Unescaped control character '0x9'" will be thrown. This removes those characters.
     json =  [json stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]; 
     _rootObject = [[json JSONValue] retain];
-    njson = nil;
     if (!_rootObject) {
       err = [NSError errorWithDomain:kTTExtJSONErrorDomain
                                 code:kTTExtJSONErrorCodeInvalidJSON
